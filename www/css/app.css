@@ -84,4 +84,19 @@
 	font-family: 'Poppins', Arial, sans-serif;
 }
 
+.bgNavbar{
+  background-color: #ff9900;
+}
+
+.cajas {
+  border: 2px solid gray;
+    padding: 5px;
+    text-align: center;
+}
+
+.tamIconos {
+  width: 41px;
+  height: 41px;
+}
+
 
