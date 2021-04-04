@@ -94,9 +94,16 @@
     text-align: center;
 }
 
-.tamIconos {
+.tam-Iconos {
   width: 41px;
   height: 41px;
 }
 
+.btn-color {
+  border-color: #ff9900;
+  color: black;
+}
 
+.color-fondo {
+  background-color: bisque;
+}

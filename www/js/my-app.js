@@ -59,7 +59,7 @@ $$(document).on('page:init', '.page[data-name="index"]', function (e) {
     if(jugador1 != "" && jugador2 != ""){
       console.log("Cargar la siguiente página");
       console.log("Nombre del jugador 1: " + jugador1);
-      console.log("Nombre del jugador 2: " + jugador2);
+      console.log("Nombre del jugador 2: " + jugador2);   
       
       mainView.router.navigate('/anotador/');
     } else {
@@ -87,16 +87,17 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
   // BOTÓN VOLVER
   $$('#btnVolver').on('click', function(){
 
-    app.dialog.alert("Se reiniciaron los datos.", "Atención");
+    app.dialog.alert("Puntos y nombres reiniciados.", "Atención");
     mainView.router.navigate('/index/');
     
   });
 
   // BOTÓN INFO
   $$('#btnInformacion').on('click', function(){
-
-  });
+    console.log("Cargar reglas del juego.");
+  });  
   
-})
+  
+}) // page init anotador
 
 // ****************************************************************************** FIN PÁGINA ANOTADOR ******************************************************************************
