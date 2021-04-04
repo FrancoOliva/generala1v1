@@ -20,7 +20,11 @@
   </div>
     
     <div class="page-content color-fondo">
-        <p class="block">Para ver las reglas del juego hacer click en "i".</p>
+        <div class="block">
+            <p>1 - Para ver las reglas del juego hacer click en "i".</p>
+            <p>2 - Volver a la pantalla anterior reinicia los nombres y puntos.</p>
+        </div>
+        
         
         <div class="block row no-gap">
             <div class="col-33"> <!-- TABLA DE PUNTOS -->
@@ -40,18 +44,20 @@
             </div>
             <div class="col-33"> <!-- COLUMNA DE PUNTOS JUGADOR 2 -->
                 <div class="cajas" id="cJugador1">Jugador 1</div>
+                <!-- jugadas del 1 al 6-->
                 <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d1">-</div>
                 <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d2">-</div>
                 <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d3">-</div>
                 <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d4">-</div>
                 <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d5">-</div>
                 <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d6">-</div>
-                <div class="cajas" id="do">-</div>
-                <div class="cajas" id="es">-</div>
-                <div class="cajas" id="fu">-</div>
-                <div class="cajas" id="po">-</div>
-                <div class="cajas" id="ge">-</div>
-                <div class="cajas" id="gs">-</div>
+                <!-- jugadas doble escalera full póker generala generala servida -->
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="do">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="es">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="fu">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="po">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="ge">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="gs">-</div>
             </div>
             <div class="col-33"> <!-- COLUMNA DE PUNTOS JUGADOR 2 -->
                 <div class="cajas" id="cJugador2">Jugador 2</div>
@@ -71,15 +77,17 @@
         </div>
         <div class="block row no-gap">
             <div class="col-33 cajas">Puntajes</div>
-            <div class="col-33 cajas">0</div>
-            <div class="col-33 cajas">0</div>
+            <div class="col-33 cajas" id="pJugador1">-</div>
+            <div class="col-33 cajas" id="pJugador2">-</div>
         </div> 
     </div> <!-- fin page content-->
 
     <!-- popup -->
     <div class="popup popup-dados color-fondo">
+
         <div class="block">
-          <h4>Elegir un valor según la cantidad de dados repetidos.</h4>
+          <h4>Toca un valor según la cantidad de dados repetidos.</h4>
+          <h4>Ej: 3 dados de 1 sumarían 3, etc.</h4>
         <div class="row cajas">
             <div class="col-50">
                 <img class="mini-dados" src="img/dado1.png">
@@ -116,8 +124,30 @@
             </div>
             <h4 class="col-50 popup-close" id="valor6"></h4>
         </div>
-        </div>
+
+        </div> <!-- block -->
+
       </div>
+    <div class="popup popup-jugadas color-fondo">
+        <div class="block">
+            <h4>Si sale al PRIMER TIRO es SERVIDA.</h4>
+            <h4>Si sale al segundo tiro o tercero, es NO SERVIDA.</h4>
+            <h4>Cuando toques tu jugada, el tablero se va a completar con su valor correspondiente.</h4>
+            <h4>Podés corroborar el valor tocando "i" (info) en la parte inferior
+                de la pantalla.
+            </h4>
+        </div>
+        <div class="block margin-top">
+            <div class="row cajas margin-top">
+                <h4 class="col-50">=)</h4>
+                <h4 class="col-50"> SERVIDA</h4>
+            </div>
+            <div class="row cajas margin-top">
+                <h4 class="col-50">=(</h4>
+                <h4 class="col-50"> NO SERVIDA</h4>
+            </div>
+        </div>
+    </div>
 
     <!-- popover -->
     <div class="popover popover-contacto">
