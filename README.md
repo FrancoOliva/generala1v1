@@ -1,7 +1,7 @@
 
-# Generala para 2 jugadores
+# Generala para 2 jugadores (ejercicio para Comunidad IT)
 
-Una aplicación sencilla para que dos jugadores de generala puedan anotar sus puntos.
+Una aplicación para que dos jugadores de generala puedan anotar sus puntos.
 
 ## Tecnologías usadas en este proyecto
 
