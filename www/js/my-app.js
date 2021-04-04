@@ -24,8 +24,12 @@ var app = new Framework7({
 
 var mainView = app.views.create('.view-main');
 
+// VARIABLES GLOBALES
 var jugador1 = "";
 var jugador2 = "";
+
+var puntosJugador1 = "";
+var puntosJugado2 = "";
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
@@ -82,8 +86,27 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
   console.log(e);
   console.log("Página anotador cargada!");
 
+  // NOMBRES DE LOS JUGADORES
   $$('#cJugador1').text(jugador1);
   $$('#cJugador2').text(jugador2);
+
+  var columnaJugador = "";
+
+  // COLUMNA JUGADOR 1 o JUGADOR 2 - DADOS DEL 1 AL 6
+  // CAPTURAMOS ID Y GENERAMOS EL VALOR CORRESPONDIENTE EN EL POPUP
+  $$('.dados').on('click', function(){
+    var id = this.id;
+    columnaJugador = id;
+    
+    var dado = parseInt(id.replace('j1_d','')); // tomamos cierto valor del ID y lo parseamos a un valor entero
+    console.log(dado);
+
+    // GENERAMOS VALORES EN EL POPUP SEGÚN EL DADO DONDE SE HIZO CLICK
+    for(var i= 1; i <= 6; i++){
+      $$('#valor' + i).text((i * dado));
+    }    
+
+  })
 
   // BOTÓN VOLVER
   $$('#btnVolver').on('click', function(){
@@ -97,10 +120,17 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
   $$('#btnInformacion').on('click', function(){
     console.log("Cargar reglas del juego.");
     mainView.router.navigate('/reglas-del-juego/');
-  });  
+  });
   
   
 }) // page init anotador
+
+// FUNCIONES
+
+function capturarID(id){
+  var id = id;
+  console.log(id);
+}
 
 // ****************************************************************************** FIN PÁGINA ANOTADOR ******************************************************************************
 

@@ -36,20 +36,22 @@
                 <div class="cajas">Full</div>
                 <div class="cajas">Póker</div>
                 <div class="cajas">Generala</div>
+                <div class="cajas">G Servida</div>
             </div>
             <div class="col-33"> <!-- COLUMNA DE PUNTOS JUGADOR 2 -->
                 <div class="cajas" id="cJugador1">Jugador 1</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d1">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d2">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d3">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d4">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d5">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d6">-</div>
+                <div class="cajas" id="do">-</div>
+                <div class="cajas" id="es">-</div>
+                <div class="cajas" id="fu">-</div>
+                <div class="cajas" id="po">-</div>
+                <div class="cajas" id="ge">-</div>
+                <div class="cajas" id="gs">-</div>
             </div>
             <div class="col-33"> <!-- COLUMNA DE PUNTOS JUGADOR 2 -->
                 <div class="cajas" id="cJugador2">Jugador 2</div>
@@ -64,7 +66,7 @@
                 <div class="cajas">-</div>
                 <div class="cajas">-</div>
                 <div class="cajas">-</div>
-
+                <div class="cajas">-</div>
             </div>
         </div>
         <div class="block row no-gap">
@@ -73,6 +75,49 @@
             <div class="col-33 cajas">0</div>
         </div> 
     </div> <!-- fin page content-->
+
+    <!-- popup -->
+    <div class="popup popup-dados color-fondo">
+        <div class="block">
+          <h4>Elegir un valor según la cantidad de dados repetidos.</h4>
+        <div class="row cajas">
+            <div class="col-50">
+                <img class="mini-dados" src="img/dado1.png">
+            </div>
+            <h4 class="col-50 popup-close" id="valor1"></h4>
+        </div>
+        <div class="row cajas">
+            <div class="col-50">
+                <img class="mini-dados" src="img/dado2.png">
+            </div>
+            <h4 class="col-50 popup-close" id="valor2"></h4>
+        </div>
+        <div class="row cajas">
+            <div class="col-50">
+                <img class="mini-dados" src="img/dado3.png">
+            </div>
+            <h4 class="col-50 popup-close" id="valor3"></h4>
+        </div>
+        <div class="row cajas">
+            <div class="col-50">
+                <img class="mini-dados" src="img/dado4.png">
+            </div>
+            <h4 class="col-50 popup-close" id="valor4"></h4>
+        </div>
+        <div class="row cajas">
+            <div class="col-50">
+                <img class="mini-dados" src="img/dado5.png">
+            </div>
+            <h4 class="col-50 popup-close" id="valor5"></h4>
+        </div>
+        <div class="row cajas">
+            <div class="col-50">
+                <img class="mini-dados" src="img/dado6.png">
+            </div>
+            <h4 class="col-50 popup-close" id="valor6"></h4>
+        </div>
+        </div>
+      </div>
 
     <!-- popover -->
     <div class="popover popover-contacto">
@@ -87,3 +132,13 @@
         </div>
       </div>
 </div>
+
+<!--
+
+    <div class="row cajas">
+        <div class="col-50">
+            <img class="mini-dados" src="img/dado1.png">
+        </div>
+        <h4 class="col-50">1</h4>
+    </div>
+-->
