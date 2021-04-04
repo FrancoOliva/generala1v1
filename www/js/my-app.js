@@ -16,7 +16,8 @@ var app = new Framework7({
     // Add default routes
     routes: [
       { path: '/anotador/', url: 'anotador.html', },
-      { path: '/index/', url: 'index.html', }
+      { path: '/index/', url: 'index.html', }, 
+      { path: '/reglas-del-juego/', url: 'reglas-del-juego.html', }
     ]
     // ... other parameters
   });
@@ -95,9 +96,17 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
   // BOTÓN INFO
   $$('#btnInformacion').on('click', function(){
     console.log("Cargar reglas del juego.");
+    mainView.router.navigate('/reglas-del-juego/');
   });  
   
   
 }) // page init anotador
 
 // ****************************************************************************** FIN PÁGINA ANOTADOR ******************************************************************************
+
+$$(document).on('page:init', '.page[data-name="reglas-del-juego"]', function (e) {
+  
+  console.log(e);
+  console.log("Página Reglas del juego cargada!");
+
+})
