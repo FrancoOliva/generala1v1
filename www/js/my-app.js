@@ -118,7 +118,7 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
     var id = this.id;
     columnaJugador = id;
 
-    var dado = parseInt(id.replace('j1_d','')); // tomamos cierto valor del ID y lo parseamos a un valor entero
+    var dado = parseInt(id[4]); // tomamos cierto valor del ID y lo parseamos a un valor entero
     console.log(dado);
 
     // GENERAMOS VALORES EN EL POPUP SEGÚN EL DADO DONDE SE HIZO CLICK
@@ -160,22 +160,42 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
 function actualizarPuntaje(){
   console.log("Actualizando puntaje");
   var total1 = 0;
+  var total2 = 0;
   
   
   // PARSEAMOS LOS VALORES DE CADA CELDA Y SUMAMOS SUS VALORES
   for(var i = 1; i <= 6; i++){
     
-    if($$('#j1_d' + i).html() != "-"){
-      total1 += parseInt($$('#j1_d' + i).html());
+    // columna j1
+    if($$('#j1_d' + i).html() == "-"){
+      total1 += 0;
+
+    } else if($$('#j1_d' + i).html() == "X"){
+      total1 += 0;
+    } else {
+      total1 += parseInt($$('#j1_d' + i).html()); 
+    }
+
+    // columna j2
+    if($$('#j2_d' + i).html() == "-"){
+      total2 += 0;
+
+    } else if($$('#j2_d' + i).html() == "X"){
+      total2 += 0;
+    } else {
+      total2 += parseInt($$('#j2_d' + i).html()); 
     }
 
   }
 
   puntosJugador1 = total1;
+  puntosJugador2 = total2;
   console.log("Puntos jugador 1: " + puntosJugador1);
+  console.log("Puntos jugador 2: " + puntosJugador2);
 
   //MODIFICAMOS PUNTAJE DE LOS JUGADORES
   $$('#pJugador1').html(puntosJugador1);
+  $$('#pJugador2').html(puntosJugador2);
 
 
 }

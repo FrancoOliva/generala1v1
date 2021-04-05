@@ -89,10 +89,20 @@
 }
 
 .cajas {
-  border: 2px solid gray;
+  border: 2px solid grey;
     padding: 5px;
     text-align: center;
+    margin: 1px;    
 }
+
+.cajas-puntos {
+    border: 2px solid grey;
+    padding: 5px;
+    text-align: center;
+    margin: 2px 1px 1px 1px;    
+}
+
+
 
 .tam-Iconos {
   width: 41px;
