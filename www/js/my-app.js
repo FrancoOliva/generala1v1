@@ -136,13 +136,25 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
   });
 
 
-  $$('#jServida').on('click',);
+  $$('#jServida').on('click', mostrarPuntajeServida);
 
   $$('#jnServida').on('click', mostrarPuntajeNoServida);
 
   $$('#tachar').on('click', tacharCelda);
 
-  
+  // REINICIAR PUNTOS
+  $$('#reiniciarPuntos').on('click', function(){
+    // reset de puntos
+    for(var i = 1; i <= 10; i++){
+      $$('#j1_d' + i).html("-");
+      $$('#j2_d' + i).html("-");
+    }
+    puntosJugador1 = 0;
+    puntosJugador2 = 0;
+    $$('#pJugador1').html(puntosJugador1);
+    $$('#pJugador2').html(puntosJugador2);
+    console.log('Puntos reiniciados.');
+  });
   
   // BOTÓN VOLVER
   $$('#btnVolver').on('click', function(){    
@@ -154,6 +166,8 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
     console.log("Cargar reglas del juego.");
     mainView.router.navigate('/reglas-del-juego/');
   });
+
+  
 
   
   
@@ -209,24 +223,24 @@ function mostrarPuntajeNoServida(){
   case "j1_d7" :
   case "j2_d7" :{
     
-    $$('#' + columnaJugador).html("20");
+    $$('#' + columnaJugador).html("20"); // escalera
     break;
   }
   case "j1_d8" :
   case "j2_d8" : {
-    $$('#' + columnaJugador).html("30");
+    $$('#' + columnaJugador).html("30"); // full
     break;
   }
 
   case "j1_d9" : 
   case "j2_d9" : {
-    $$('#' + columnaJugador).html("40");
+    $$('#' + columnaJugador).html("40"); // póker
     break;
   }
 
   case "j1_d10" :
   case "j2_d10" : {
-    $$('#' + columnaJugador).html("50");
+    $$('#' + columnaJugador).html("50"); // generala 
     break;
   }
 
@@ -243,21 +257,34 @@ function tacharCelda(){
   actualizarPuntaje();
 }
 
-// function mostrarPuntajeServida(){
-//   j1_d7
-//   j1_d8
-//   j1_d9
-//   j1_d10
-//   j1_d11
-//   j1_d12
-//   j2_d7
-//   j2_d8
-//   j2_d9
-//   j2_d10
-//   j2_d11
-//   j2_d12
+function mostrarPuntajeServida(){
+   
+  switch(columnaJugador){
+    case "j1_d7" :
+    case "j2_d7" :{
+      $$('#' + columnaJugador).html("25"); // escalera
+      break;
+    }
+    case "j1_d8" :
+    case "j2_d8" :{
+      $$('#' + columnaJugador).html("35"); // full
+      break;
+    }
+    case "j1_d9" :
+    case "j2_d9" :{
+      $$('#' + columnaJugador).html("45"); // póker
+      break;
+    }
+    case "j1_d10" :
+    case "j2_d10" : {
+      $$('#' + columnaJugador).html("Ganaste"); // póker
+      break;
+    }
 
-// }
+  }
+   
+
+}
 
 // ****************************************************************************** PÁGINA REGLAS DE JUEGO ******************************************************************************
 
