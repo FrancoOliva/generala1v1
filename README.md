@@ -1,17 +1,25 @@
-
-# Generala para 2 jugadores (ejercicio para Comunidad IT)
+# <u>Generala para 2 jugadores</u>
 
 Una aplicación para que dos jugadores de generala puedan anotar sus puntos.
 
-## Tecnologías usadas en este proyecto
+Este ejercicio fue realizado en el curso intensivo de desarrollo mobile con [Comunidad IT](https://www.comunidadit.org/).
 
-Framework7.
-JavaScript.
-HTML.
-CSS.
-Apache Cordova (permite el desarrollo de aplicaciones híbridas).
-DOM7.
+## <u>Tecnologías usadas en este proyecto</u>
 
-## PODÉS CONTACTARME EN
+Framework7
+
+JS
+
+HTML
+
+CSS
+
+Apache Cordova
+
+DOM7
+
+## <u>Formas de contactarme</u>
 
 https://www.linkedin.com/in/olivafranco/
+
++54 9 341 283 1090
