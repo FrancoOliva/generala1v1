@@ -82,6 +82,7 @@
 
 * {
 	font-family: 'Poppins', Arial, sans-serif;
+  color: #364547;
 }
 
 .bgNavbar{
@@ -109,6 +110,11 @@
   height: 41px;
 }
 
+.iconos {
+  width: 41px;
+  height: 41px;
+}
+
 
 .tam-Iconos:active{
   filter: drop-shadow(5px 5px 5px grey);
@@ -128,6 +134,7 @@
 .mini-dados {
   width: 41px;
   height: 41px;
+  margin-top: 8px;
 }
 
 .btn-color {
@@ -139,4 +146,13 @@
   background-color: bisque;
 }
 
+.centrar-contenedor {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mt25 {
+  margin-top: 25%;
+}
 
