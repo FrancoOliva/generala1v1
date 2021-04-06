@@ -6,6 +6,8 @@ IMPORTATE: Al abrir el proyecto en tu explorador, tenés que hacer click derecho
 
 Este ejercicio fue realizado en el curso intensivo de desarrollo mobile con [Comunidad IT](https://www.comunidadit.org/).
 
+Me llevo 13 hs y 45 minutos.
+
 ## <u>Tecnologías usadas en este proyecto</u>
 
 Framework7
