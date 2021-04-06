@@ -35,12 +35,12 @@
                 <div class="cajas">4</div>
                 <div class="cajas">5</div>
                 <div class="cajas">6</div>
-                <div class="cajas">Doble</div>
+                
                 <div class="cajas">Escalera</div>
                 <div class="cajas">Full</div>
                 <div class="cajas">Póker</div>
                 <div class="cajas">Generala</div>
-                <div class="cajas">G Servida</div>
+                
                 <div class="cajas-puntos">Puntos</div>
             </div>
             <div class="col-33"> <!-- COLUMNA DE PUNTOS JUGADOR 1 -->
@@ -53,12 +53,12 @@
                 <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d5">-</div>
                 <div class="cajas popup-open dados" data-popup=".popup-dados" id="j1_d6">-</div>
                 <!-- jugadas doble escalera full póker generala generala servida -->
-                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="do">-</div>
-                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="es">-</div>
-                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="fu">-</div>
-                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="po">-</div>
-                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="ge">-</div>
-                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="gs">-</div>
+                
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="j1_d7">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="j1_d8">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="j1_d9">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="j1_d10">-</div>
+                
                 <div class="cajas-puntos" id="pJugador1">-</div>
             </div>
             <div class="col-33"> <!-- COLUMNA DE PUNTOS JUGADOR 2 -->
@@ -70,13 +70,13 @@
                 <div class="cajas popup-open dados" data-popup=".popup-dados" id="j2_d4">-</div>
                 <div class="cajas popup-open dados" data-popup=".popup-dados" id="j2_d5">-</div>
                 <div class="cajas popup-open dados" data-popup=".popup-dados" id="j2_d6">-</div>
-                <!-- jugadas doble escalera full póker generala generala servida -->
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
-                <div class="cajas">-</div>
+                <!-- jugadas doble escalera full póker generala  -->
+                
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="j2_d7">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="j2_d8">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="j2_d9">-</div>
+                <div class="cajas popup-open dados" data-popup=".popup-jugadas" id="j2_d10">-</div>
+                
                 <div class="cajas-puntos" id="pJugador2">-</div>
             </div>
 
@@ -102,49 +102,50 @@
             <div class="col-50">
                 <img class="mini-dados" src="img/dado1.png">
             </div>
-            <h4 class="col-50 popup-close" id="valor1"></h4>
+            <h4 class="col-50 popup-close puntaje" id="valor1"></h4>
         </div>
         <div class="row cajas">
             <div class="col-50">
                 <img class="mini-dados" src="img/dado2.png">
             </div>
-            <h4 class="col-50 popup-close" id="valor2"></h4>
+            <h4 class="col-50 popup-close puntaje" id="valor2"></h4>
         </div>
         <div class="row cajas">
             <div class="col-50">
                 <img class="mini-dados" src="img/dado3.png">
             </div>
-            <h4 class="col-50 popup-close" id="valor3"></h4>
+            <h4 class="col-50 popup-close puntaje" id="valor3"></h4>
         </div>
         <div class="row cajas">
             <div class="col-50">
-                <img class="mini-dados" src="img/dado4.png">
+                <img class="mini-dados puntaje" src="img/dado4.png">
             </div>
-            <h4 class="col-50 popup-close" id="valor4"></h4>
+            <h4 class="col-50 popup-close puntaje" id="valor4"></h4>
         </div>
         <div class="row cajas">
             <div class="col-50">
                 <img class="mini-dados" src="img/dado5.png">
             </div>
-            <h4 class="col-50 popup-close" id="valor5"></h4>
+            <h4 class="col-50 popup-close puntaje" id="valor5"></h4>
         </div>
         <div class="row cajas">
             <div class="col-50">
                 <img class="mini-dados" src="img/dado6.png">
             </div>
-            <h4 class="col-50 popup-close" id="valor6"></h4>
+            <h4 class="col-50 popup-close puntaje" id="valor6"></h4>
         </div>
         <div class="row cajas">
             <div class="col-50">
                 <img class="mini-dados" src="img/tachar.png">
             </div>
-            <h4 class="col-50 popup-close">X</h4>
+            <h4 class="col-50 popup-close puntaje">X</h4>
         </div>
 
         </div> <!-- block -->
 
       </div>
-    <div class="popup popup-jugadas color-fondo">
+    
+      <div class="popup popup-jugadas color-fondo">
         <div class="block">
             <h4>Si sale al PRIMER TIRO es SERVIDA.</h4>
             <h4>Si sale al segundo tiro o tercero, es NO SERVIDA.</h4>
@@ -156,11 +157,17 @@
         <div class="block margin-top">
             <div class="row cajas margin-top">
                 <h4 class="col-50">=)</h4>
-                <h4 class="col-50"> SERVIDA</h4>
+                <h4 class="col-50 popup-close" id="jServida">SERVIDA</h4>
             </div>
             <div class="row cajas margin-top">
                 <h4 class="col-50">=(</h4>
-                <h4 class="col-50"> NO SERVIDA</h4>
+                <h4 class="col-50 popup-close" id="jnServida">NO SERVIDA</h4>
+            </div>
+            <div class="row cajas margin-top">
+                <div class="col-50">
+                    <img class="mini-dados" src="img/tachar.png">
+                </div>
+                <h4 class="col-50 popup-close puntaje">X</h4>
             </div>
         </div>
     </div>

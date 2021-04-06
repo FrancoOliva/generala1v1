@@ -93,8 +93,6 @@ $$(document).on('page:init', '.page[data-name="index"]', function (e) {
   
 })
 
-
-
 // ****************************************************************************** INICIO PÁGINA ANOTADOR ******************************************************************************
 
 
@@ -111,8 +109,6 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
   $$('#pJugador1').html(0);
   $$('#pJugador2').html(0);
 
-
-  // COLUMNA JUGADOR 1 o JUGADOR 2 - DADOS DEL 1 AL 6
   // CAPTURAMOS ID Y GENERAMOS EL VALOR CORRESPONDIENTE EN EL POPUP
   $$('.dados').on('click', function(){
     var id = this.id;
@@ -129,21 +125,28 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
   })
 
   // MODIFICAMOS COLUMNA DEL JUGADOR AGREGANDO UN VALOR AL CERRAR EL POPUP
-  $$('.popup-close').on('click', function(){
+  $$('.puntaje').on('click', function(){
     console.log('Cerraste un popup!');
     console.log(columnaJugador);
-
-    $$('#'+columnaJugador).html(this.innerHTML);
     
+    $$('#'+columnaJugador).html(this.innerHTML);     
+
     actualizarPuntaje();
 
   });
 
+
+  $$('#jServida').on('click',);
+
+  $$('#jnServida').on('click', mostrarPuntajeNoServida);
+
+  $$('#tachar').on('click', tacharCelda);
+
+  
+  
   // BOTÓN VOLVER
-  $$('#btnVolver').on('click', function(){
-    
-    mainView.router.navigate('/index/');
-    
+  $$('#btnVolver').on('click', function(){    
+    mainView.router.navigate('/index/');    
   });
 
   // BOTÓN INFO
@@ -151,6 +154,7 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
     console.log("Cargar reglas del juego.");
     mainView.router.navigate('/reglas-del-juego/');
   });
+
   
   
 }) // page init anotador
@@ -164,7 +168,7 @@ function actualizarPuntaje(){
   
   
   // PARSEAMOS LOS VALORES DE CADA CELDA Y SUMAMOS SUS VALORES
-  for(var i = 1; i <= 6; i++){
+  for(var i = 1; i <= 10; i++){
     
     // columna j1
     if($$('#j1_d' + i).html() == "-"){
@@ -199,6 +203,61 @@ function actualizarPuntaje(){
 
 
 }
+
+function mostrarPuntajeNoServida(){
+  switch(columnaJugador){
+  case "j1_d7" :
+  case "j2_d7" :{
+    
+    $$('#' + columnaJugador).html("20");
+    break;
+  }
+  case "j1_d8" :
+  case "j2_d8" : {
+    $$('#' + columnaJugador).html("30");
+    break;
+  }
+
+  case "j1_d9" : 
+  case "j2_d9" : {
+    $$('#' + columnaJugador).html("40");
+    break;
+  }
+
+  case "j1_d10" :
+  case "j2_d10" : {
+    $$('#' + columnaJugador).html("50");
+    break;
+  }
+
+
+  }
+
+  actualizarPuntaje();
+}
+
+function tacharCelda(){
+  console.log("tachar celda");
+  $$('#'+columnaJugador).text("X");
+
+  actualizarPuntaje();
+}
+
+// function mostrarPuntajeServida(){
+//   j1_d7
+//   j1_d8
+//   j1_d9
+//   j1_d10
+//   j1_d11
+//   j1_d12
+//   j2_d7
+//   j2_d8
+//   j2_d9
+//   j2_d10
+//   j2_d11
+//   j2_d12
+
+// }
 
 // ****************************************************************************** PÁGINA REGLAS DE JUEGO ******************************************************************************
 
