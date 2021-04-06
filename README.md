@@ -2,6 +2,8 @@
 
 Una aplicación para que dos jugadores de generala puedan anotar sus puntos.
 
+IMPORTATE: Al abrir el proyecto en tu explorador, tenés que hacer click derecho, darle a INSPECCIONAR y tocar la opción TOGGLE DEVICE TOOLBAR.
+
 Este ejercicio fue realizado en el curso intensivo de desarrollo mobile con [Comunidad IT](https://www.comunidadit.org/).
 
 ## <u>Tecnologías usadas en este proyecto</u>
