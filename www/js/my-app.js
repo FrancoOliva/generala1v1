@@ -163,11 +163,11 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
 
   // BOTÓN INFO
   $$('#btnInformacion').on('click', function(){
-    console.log("Cargar reglas del juego.");
+    console.log("Cargar reglas del juego.");    
+
     mainView.router.navigate('/reglas-del-juego/');
   });
 
-  
 
   
   

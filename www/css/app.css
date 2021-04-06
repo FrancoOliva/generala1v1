@@ -110,6 +110,26 @@
 }
 
 
+.tam-Iconos:active{
+  filter: drop-shadow(5px 5px 5px grey);
+}
+
+.tam-Iconos1 {
+  width: 41px;
+  height: 41px;
+  margin-top: 4px;
+}
+
+
+.tam-Iconos1:active{
+  filter: drop-shadow(5px 5px 5px grey);
+}
+
+.mini-dados {
+  width: 41px;
+  height: 41px;
+}
+
 .btn-color {
   border-color: #ff9900;
   color: black;
@@ -119,7 +139,4 @@
   background-color: bisque;
 }
 
-.mini-dados{
-  width: 50px;
-  height: 50px;
-}
+
